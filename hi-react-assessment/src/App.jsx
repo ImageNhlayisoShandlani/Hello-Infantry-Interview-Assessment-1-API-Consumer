@@ -3,14 +3,14 @@ import { Routes, Route } from 'react-router-dom';
 
 // TODO: Use React.lazy() to code-split your page components
 // Example: const Home = lazy(() => import('./pages/Home'));
-import Home from './pages/Home';
-import Detail from './pages/Detail';
+const Home = lazy(() => import('./pages/Home'));
+const Detail = lazy(() => import('./pages/Detail'));
 
 function App() {
   return (
     <div className="app">
       <header className="app-header">
-        <h1>HI Assessment</h1>
+        <h1>Pokemons</h1>
         {/* TODO: Add navigation links */}
       </header>
 
