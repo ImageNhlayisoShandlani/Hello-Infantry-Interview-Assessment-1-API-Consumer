@@ -19,9 +19,17 @@ import { useState, useEffect } from 'react';
  * @param {number} delay - Delay in milliseconds
  * @returns {any} The debounced value
  */
-export function useDebounce(value, delay = 300) {
-  // TODO: Implement this hook
-  // Hint: You'll need useState and useEffect
-  // Hint: Don't forget to clean up the timeout
-  return value; // Currently returns immediately — no debouncing
+export function useDebounce(value, delay = 300) {4
+
+  //debounce value state
+  const [debounceValue, setDebounceValue] = useState(value);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setDebounceValue(value);
+    }, delay);
+
+    return () => clearTimeout(timer);
+  }, [value]);
+  return value; 
 }
