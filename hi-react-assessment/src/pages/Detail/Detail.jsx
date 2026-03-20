@@ -44,7 +44,7 @@ function Detail() {
   return (
     <div className="detail">
       <Link to="/" className="detail-back">
-        {"<--- View all Pokemons"}
+        {"< View all Pokemons"}
       </Link>
       <div className="detail-card">
         <div className="detail-image__wrap">
