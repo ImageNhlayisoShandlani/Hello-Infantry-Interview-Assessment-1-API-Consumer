@@ -10,7 +10,6 @@
 const API_URL = import.meta.env.VITE_API_URL;
 
 const cache = new Map();
-
 async function cachedFecth(url = "") {
   if (cache.has(url)) return cache.get(url);
 

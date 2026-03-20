@@ -1,17 +1,15 @@
 import { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-// TODO: Use React.lazy() to code-split your page components
-// Example: const Home = lazy(() => import('./pages/Home'));
-const Home = lazy(() => import('./pages/Home'));
-const Detail = lazy(() => import('./pages/Detail'));
+
+const Home = lazy(() => import('./pages/Home/Home'));
+const Detail = lazy(() => import('./pages/Detail/Detail'));
 
 function App() {
   return (
     <div className="app">
       <header className="app-header">
         <h1>Pokemons</h1>
-        {/* TODO: Add navigation links */}
       </header>
 
       <main>

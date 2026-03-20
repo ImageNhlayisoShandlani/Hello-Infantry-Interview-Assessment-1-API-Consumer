@@ -1,3 +1,4 @@
+/*root resuable styles */
 :root{
   --color-bg: #0f0f1a;
   --color-surface:    #1a1a2e;
@@ -60,21 +61,3 @@ a {
   align-items: center;
 }
 
-
-.app-main {
-  flex: 1;
-  width: 100%;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 2rem 1.5rem;
-}
-
-.page-loader {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 60vh;
-  font-size: 1.1rem;
-  color: var(--color-text-muted);
-  letter-spacing: 0.5px;
-}

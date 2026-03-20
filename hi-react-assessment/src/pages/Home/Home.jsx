@@ -1,7 +1,7 @@
 import { useCallback, useMemo, useState, useEffect } from "react";
-import PokemonCard from "../components/PokemonCard";
-import { useDebounce } from "../hooks/useDebounce";
-import { fetchItems, fetchAllNames } from "../services/api";
+import PokemonCard from "../../components/PokemonCard/PokemonCard";
+import { useDebounce } from "../../hooks/useDebounce";
+import { fetchItems, fetchAllNames } from "../../services/api";
 import "./Home.css";
 
 const PAGE_SIZE = 20;
@@ -129,7 +129,7 @@ function Home() {
             onClick={goPrev}
             disabled={page === 0}
           >
-            ← Prev
+            {`< PREV`}
           </button>
           <span className="pagination-info">
             Page {page + 1} of {totalPages}
@@ -139,7 +139,7 @@ function Home() {
             onClick={goNext}
             disabled={page >= totalPages - 1}
           >
-            Next →
+            {`NEXT >`}
           </button>
         </div>
       )}
